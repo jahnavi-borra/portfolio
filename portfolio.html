@@ -1,0 +1,1323 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JAHNAVI | PROFESSIONAL PORTFOLIO</title>
+
+    <!-- BOOTSTRAP 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            background: #031b35;
+            color: white;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 95px 20px 60px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 45px;
+            text-transform: uppercase;
+        }
+
+        .section-title span {
+            color: #5bc9ff;
+        }
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            background: rgba(1, 21, 43, 0.97);
+            backdrop-filter: blur(12px);
+            padding: 14px 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 1.3rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .navbar-brand span {
+            color: #53c6ff;
+        }
+
+        .nav-link {
+            color: #d8efff !important;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-left: 8px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #53c6ff !important;
+        }
+
+        /* =========================================
+           COMMON BUTTONS
+        ========================================= */
+
+        .blue-btn {
+            background: #078be0;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 26px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .blue-btn:hover {
+            background: #55c8ff;
+            color: #01223f;
+            transform: translateY(-3px);
+        }
+
+        .outline-btn {
+            border: 2px solid #5bc9ff;
+            color: white;
+            background: transparent;
+            border-radius: 50px;
+            padding: 12px 26px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .outline-btn:hover {
+            background: #5bc9ff;
+            color: #01223f;
+        }
+
+        /* =========================================
+           SLIDE 1 - HOME
+        ========================================= */
+
+        #home {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 25, 52, 0.96),
+                    rgba(0, 107, 190, 0.80)
+                ),
+                url("https://images.unsplash.com/photo-1527842891421-42eec6e703ea?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1maWQ8MHxwaG90byJ9");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home-content {
+            animation: fadeUp 1s ease;
+        }
+
+        .welcome-text {
+            color: #62ccff;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .home-title {
+            font-size: clamp(3.5rem, 16vw, 7rem);
+            line-height: 0.9;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .home-title span {
+            color: #5bc9ff;
+        }
+
+        .home-subtitle {
+            margin-top: 25px;
+            max-width: 650px;
+            color: #d8efff;
+            font-size: 0.9rem;
+            line-height: 1.9;
+            letter-spacing: 1px;
+        }
+
+        .home-buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* =========================================
+           SLIDE 2 - ABOUT
+        ========================================= */
+
+        #about {
+            background:
+                linear-gradient(
+                    135deg,
+                    #021c39,
+                    #075b96
+                );
+        }
+
+        .about-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 25px;
+            padding: 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .about-card p {
+            color: #c8e9ff;
+            font-size: 0.85rem;
+            line-height: 1.9;
+        }
+
+        .details {
+            margin-top: 25px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.78rem;
+        }
+
+        .detail-label {
+            color: #5bc9ff;
+            font-weight: 900;
+        }
+
+        .detail-value {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* =========================================
+           SLIDE 3 - EDUCATION
+        ========================================= */
+
+        #education {
+            background: #eaf7ff;
+            color: #063258;
+        }
+
+        #education .section-title {
+            color: #063258;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: 25px;
+            padding: 35px 25px;
+            border-top: 6px solid #078ce1;
+            box-shadow: 0 20px 55px rgba(0,67,120,0.15);
+            transition: 0.4s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .education-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #e0f4ff;
+            color: #0785d2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+        }
+
+        .education-card h3 {
+            color: #053a6c;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.35rem;
+        }
+
+        .education-card p {
+            color: #627e98;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .cgpa {
+            display: inline-block;
+            background: #0785d2;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 0.8rem;
+        }
+
+        /* =========================================
+           SLIDE 4 - SKILLS
+        ========================================= */
+
+        #skills {
+            background:
+                linear-gradient(
+                    135deg,
+                    #021a36,
+                    #006fc2
+                );
+        }
+
+        .skill-card {
+            height: 100%;
+            padding: 32px 20px;
+            text-align: center;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: 0.4s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.16);
+        }
+
+        .skill-icon {
+            color: #62ccff;
+            font-size: 3.2rem;
+            margin-bottom: 18px;
+        }
+
+        .skill-card h3 {
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .skill-card p {
+            color: #c8e9ff;
+            font-size: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .progress-container {
+            height: 7px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .progress-bar-custom {
+            height: 100%;
+            width: 90%;
+            background: #5bc9ff;
+            border-radius: 20px;
+            animation: progressAnimation 1.5s ease;
+        }
+
+        .progress-c {
+            width: 82%;
+        }
+
+        /* =========================================
+           SLIDE 5 - STRENGTHS
+        ========================================= */
+
+        #strengths {
+            background: #e7f6ff;
+            color: #063258;
+        }
+
+        #strengths .section-title {
+            color: #063258;
+        }
+
+        .strength-card {
+            background: white;
+            border-radius: 25px;
+            padding: 35px 20px;
+            height: 100%;
+            text-align: center;
+            box-shadow: 0 18px 50px rgba(0,70,130,0.12);
+            transition: 0.4s;
+        }
+
+        .strength-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .strength-icon {
+            width: 70px;
+            height: 70px;
+            margin: auto auto 20px;
+            background: #e1f4ff;
+            color: #087fc9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .strength-card h3 {
+            color: #053b70;
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .strength-card p {
+            color: #69839a;
+            font-size: 0.78rem;
+            line-height: 1.7;
+        }
+
+        /* =========================================
+           SLIDE 6 - CONTACT
+        ========================================= */
+
+        #contact {
+            background:
+                linear-gradient(
+                    135deg,
+                    #012447,
+                    #0080d2
+                );
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 25px;
+            padding: 30px 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 17px;
+            margin-bottom: 12px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .contact-item i {
+            color: #62ccff;
+            font-size: 1.5rem;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .contact-item h6 {
+            color: #67caff;
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: white;
+            font-size: 0.8rem;
+            margin: 0;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #011326;
+            color: #b8def7;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.72rem;
+            letter-spacing: 1px;
+        }
+
+        footer strong {
+            color: #5bc9ff;
+        }
+
+        /* =========================================
+           SCROLL ANIMATION
+        ========================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(45px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           ANIMATIONS
+        ========================================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes progressAnimation {
+
+            from {
+                width: 0;
+            }
+
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 576px) {
+
+            section {
+                padding: 95px 17px 55px;
+            }
+
+            .navbar {
+                padding: 12px 8px;
+            }
+
+            .home-title {
+                font-size: 3.6rem;
+            }
+
+            .home-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .home-buttons {
+                flex-direction: column;
+            }
+
+            .home-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 1.9rem;
+                letter-spacing: 2px;
+            }
+
+            .about-card {
+                padding: 23px;
+            }
+
+            .detail-row {
+                font-size: 0.7rem;
+            }
+
+            .education-card {
+                padding: 28px 20px;
+            }
+
+            .skill-card,
+            .strength-card {
+                padding: 30px 18px;
+            }
+
+            .contact-card {
+                padding: 20px 12px;
+            }
+
+            .contact-item {
+                padding: 15px 12px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            JAH<span>NAVI</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavigation"
+            aria-controls="mainNavigation"
+            aria-expanded="false"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavigation">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">
+                        HOME
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        ABOUT
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">
+                        EDUCATION
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        SKILLS
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#strengths">
+                        STRENGTHS
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        CONTACT
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================
+     SLIDE 1 - HOME
+========================================= -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="home-content">
+
+            <div class="welcome-text">
+                WELCOME TO MY PORTFOLIO
+            </div>
+
+            <h1 class="home-title">
+                JAH<br>
+                <span>NAVI</span>
+            </h1>
+
+            <p class="home-subtitle">
+                A MOTIVATED AND DEDICATED ENGINEERING STUDENT
+                PASSIONATE ABOUT PROGRAMMING, TECHNOLOGY,
+                LEADERSHIP AND CONTINUOUS LEARNING.
+            </p>
+
+            <div class="home-buttons">
+
+                <a href="#about" class="btn blue-btn">
+                    EXPLORE PROFILE
+                </a>
+
+                <a href="#contact" class="btn outline-btn">
+                    CONTACT ME
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SLIDE 2 - ABOUT
+========================================= -->
+
+<section id="about">
+
+    <div class="container reveal">
+
+        <h2 class="section-title">
+            ABOUT <span>ME</span>
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-lg-8">
+
+                <div class="about-card">
+
+                    <h3>
+                        HELLO, I AM JAHNAVI
+                    </h3>
+
+                    <p class="mt-3">
+                        I AM A DEDICATED AND MOTIVATED ENGINEERING
+                        STUDENT WITH A STRONG INTEREST IN PROGRAMMING
+                        AND TECHNOLOGY.
+                    </p>
+
+                    <p>
+                        I ENJOY SOLVING PROBLEMS, LEARNING NEW
+                        TECHNOLOGIES AND DEVELOPING MY TECHNICAL
+                        AND PROFESSIONAL SKILLS. I ALSO VALUE
+                        TEAMWORK AND LEADERSHIP.
+                    </p>
+
+                    <div class="details">
+
+                        <div class="detail-row">
+                            <span class="detail-label">NAME</span>
+                            <span class="detail-value">JAHNAVI</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">COLLEGE</span>
+                            <span class="detail-value">
+                                SIR CR REDDY COLLEGE OF ENGINEERING
+                            </span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">STUDENT ID</span>
+                            <span class="detail-value">
+                                25B81A0547
+                            </span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">CGPA</span>
+                            <span class="detail-value">
+                                9.0
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SLIDE 3 - EDUCATION
+========================================= -->
+
+<section id="education">
+
+    <div class="container reveal">
+
+        <h2 class="section-title">
+            <span>EDUCATION</span>
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-9 col-lg-7">
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+
+                    <h3>
+                        SIR CR REDDY COLLEGE OF ENGINEERING
+                    </h3>
+
+                    <p class="mt-3">
+                        ENGINEERING STUDENT WITH A STRONG
+                        INTEREST IN PROGRAMMING AND TECHNOLOGY.
+                    </p>
+
+                    <p>
+                        <strong>STUDENT ID:</strong>
+                        25B81A0547
+                    </p>
+
+                    <p>
+                        <strong>ACADEMIC PERFORMANCE:</strong>
+                        EXCELLENT
+                    </p>
+
+                    <span class="cgpa">
+                        CGPA: 9.0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SLIDE 4 - SKILLS
+========================================= -->
+
+<section id="skills">
+
+    <div class="container reveal">
+
+        <h2 class="section-title">
+            MY <span>SKILLS</span>
+        </h2>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- PYTHON -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-filetype-py"></i>
+                    </div>
+
+                    <h3>
+                        PYTHON
+                    </h3>
+
+                    <p>
+                        PROGRAMMING, LOGIC BUILDING,
+                        PROBLEM SOLVING AND APPLICATION DEVELOPMENT.
+                    </p>
+
+                    <div class="progress-container">
+                        <div class="progress-bar-custom"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- C -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+
+                    <h3>
+                        C
+                    </h3>
+
+                    <p>
+                        PROGRAMMING FUNDAMENTALS,
+                        LOGIC BUILDING AND ALGORITHMIC THINKING.
+                    </p>
+
+                    <div class="progress-container">
+                        <div class="progress-bar-custom progress-c"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEAMWORK -->
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <h3>
+                        TEAMWORK
+                    </h3>
+
+                    <p>
+                        COLLABORATION, COMMUNICATION AND
+                        CONTRIBUTING EFFECTIVELY TO A TEAM.
+                    </p>
+
+                    <div class="progress-container">
+                        <div class="progress-bar-custom"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SLIDE 5 - STRENGTHS
+========================================= -->
+
+<section id="strengths">
+
+    <div class="container reveal">
+
+        <h2 class="section-title">
+            <span>PROFESSIONAL</span> STRENGTHS
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- LEADERSHIP -->
+
+            <div class="col-12 col-md-6">
+
+                <div class="strength-card">
+
+                    <div class="strength-icon">
+                        <i class="bi bi-person-badge-fill"></i>
+                    </div>
+
+                    <h3>
+                        LEADERSHIP
+                    </h3>
+
+                    <p>
+                        ABILITY TO TAKE RESPONSIBILITY,
+                        GUIDE TEAM MEMBERS AND WORK TOWARDS
+                        COMMON GOALS.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEAMWORK -->
+
+            <div class="col-12 col-md-6">
+
+                <div class="strength-card">
+
+                    <div class="strength-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <h3>
+                        TEAMWORK
+                    </h3>
+
+                    <p>
+                        STRONG COLLABORATION AND COMMUNICATION
+                        SKILLS WITH A POSITIVE TEAM-ORIENTED
+                        APPROACH.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SLIDE 6 - CONTACT
+========================================= -->
+
+<section id="contact">
+
+    <div class="container reveal">
+
+        <h2 class="section-title">
+            CONTACT <span>ME</span>
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-9 col-lg-7">
+
+                <div class="contact-card">
+
+                    <!-- PHONE -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <div>
+                            <h6>
+                                PHONE
+                            </h6>
+
+                            <a href="tel:9542587567">
+                                9542587567
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <div>
+                            <h6>
+                                EMAIL
+                            </h6>
+
+                            <a href="mailto:jahnavi.borra.11@gmail.com">
+                                jahnavi.borra.11@gmail.com
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- COLLEGE -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-building-fill"></i>
+
+                        <div>
+                            <h6>
+                                COLLEGE
+                            </h6>
+
+                            <p>
+                                SIR CR REDDY COLLEGE OF ENGINEERING
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ID -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-person-vcard-fill"></i>
+
+                        <div>
+                            <h6>
+                                STUDENT ID
+                            </h6>
+
+                            <p>
+                                25B81A0547
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CGPA -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-award-fill"></i>
+
+                        <div>
+                            <h6>
+                                CGPA
+                            </h6>
+
+                            <p>
+                                9.0
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <p class="mb-0">
+        © <span id="year"></span>
+        <strong>JAHNAVI</strong>
+        | PROFESSIONAL PORTFOLIO
+    </p>
+
+</footer>
+
+
+<!-- =========================================
+     BOOTSTRAP JAVASCRIPT
+========================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+    /* =========================================
+       CURRENT YEAR
+    ========================================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================================
+       SCROLL REVEAL ANIMATION
+    ========================================= */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+
+        revealElements.forEach(function(element) {
+
+            const elementTop =
+                element.getBoundingClientRect().top;
+
+            const screenPosition =
+                window.innerHeight - 100;
+
+            if (elementTop < screenPosition) {
+
+                element.classList.add("active");
+
+            }
+
+        });
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        revealOnScroll
+    );
+
+    revealOnScroll();
+
+
+    /* =========================================
+       MOBILE NAVBAR AUTO CLOSE
+    ========================================= */
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+    const navigation =
+        document.querySelector("#mainNavigation");
+
+    navLinks.forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            if (navigation.classList.contains("show")) {
+
+                const collapse =
+                    bootstrap.Collapse.getInstance(navigation);
+
+                if (collapse) {
+
+                    collapse.hide();
+
+                } else {
+
+                    new bootstrap.Collapse(navigation).hide();
+
+                }
+
+            }
+
+        });
+
+    });
+
+
+    /* =========================================
+       ACTIVE NAVIGATION
+    ========================================= */
+
+    const sections =
+        document.querySelectorAll("section");
+
+    window.addEventListener("scroll", function() {
+
+        let currentSection = "";
+
+        sections.forEach(function(section) {
+
+            const sectionTop =
+                section.offsetTop - 160;
+
+            if (window.scrollY >= sectionTop) {
+
+                currentSection =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+        navLinks.forEach(function(link) {
+
+            link.classList.remove("active");
+
+            if (
+                link.getAttribute("href") ===
+                "#" + currentSection
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
+```
